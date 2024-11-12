@@ -54,10 +54,6 @@ public class APICaller {
             // Send the request and get the response
             HttpResponse<String> response = HttpClient.newHttpClient().send(request, HttpResponse.BodyHandlers.ofString());
 
-            // Print response
-            System.out.println("Response Code: " + response.statusCode());
-            System.out.println("Response Body: " + response.body());
-
             // Handle status code
             if (response.statusCode() == 200) {
                 System.out.println("Success: " + response.body());
